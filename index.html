@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>FADHILI LUMUMBA'S RESUME</title>
+</head>
+<body>
+    <!-- Simple Navigation -->
+    <div id="navbar">
+        <a href="#header">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <div id="menu-toggle">☰</div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <h1><b>FADHILI</b> LUMUMBA</h1>
+        <hr>
+        CURRICULUM VITAE
+        <hr>
+        <p>Student | Social Media Manager | Tech Enthusiast</p>
+    </header>
+
+    <!-- About Section -->
+    <div id="about">
+        <h2>ABOUT</h2>
+        <p>I am a first-year student at African Leadership University with a passion for technology and communication. As an active member of the debate club and ALU chess club, I enjoy intellectual challenges and strategic thinking. I am multilingual, speaking English, Swahili, and Spanish fluently.</p>
+        <p>My experience in social media management and AI-powered applications has given me valuable insights into the intersection of technology and human connection.</p>
+    </div>
+
+    <!-- Work Experience -->
+    <div id="experience">
+        <h2>WORK EXPERIENCE</h2>
+        <div class="job">
+            <h3>Social Media Manager</h3>
+            <h4>The Cubicle</h4>
+            <p><i>8 months</i></p>
+            <p>I managed and grew social media presence, significantly increasing engagement and establishing the company as one of the best in the industry. I developed content strategies and implemented campaigns that enhanced brand visibility.</p>
+        </div>
+        <div class="job">
+            <h3>Team Member</h3>
+            <h4>Idrobe - AI Fashion Application</h4>
+            <p><i>1 year</i></p>
+            <p>I contributed to an innovative AI-powered application that combines technology and fashion. I gained experience in tech startup environment and understanding of AI applications in retail.</p>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div id="education">
+        <h2>EDUCATION</h2>
+        <div class="school">
+            <h3>African Leadership University</h3>
+            <p><b>Current Student - First Year</b></p>
+            <p>Active member of Debate Club and Chess Club</p>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills">
+        <h2>SKILLS</h2>
+        <div class="skill-box">
+            <h3>Languages</h3>
+            <ul>
+                <li>English (Fluent)</li>
+                <li>Swahili (Fluent)</li>
+                <li>Spanish (Fluent)</li>
+            </ul>
+        </div>
+        <div class="skill-box">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Social Media Management</li>
+                <li>Content Strategy</li>
+                <li>Digital Marketing</li>
+                <li>AI Applications</li>
+            </ul>
+        </div>
+        <div class="skill-box">
+            <h3>Personal Skills</h3>
+            <ul>
+                <li>Public Speaking (Debate)</li>
+                <li>Strategic Thinking (Chess)</li>
+                <li>Team Work</li>
+                <li>Cultural Adaptability</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Projects with simple slider -->
+    <div id="projects">
+        <h2>PROJECTS</h2>
+        <div id="project-slider">
+            <div class="project-slide" id="slide1">
+                <h3>Social Media Growth Campaign</h3>
+                <p>Successfully grew The Cubicle's social media presence through strategic content creation and engagement tactics, resulting in significant follower growth and improved brand recognition.</p>
+            </div>
+            <div class="project-slide" id="slide2" style="display: none;">
+                <h3>AI Fashion Technology</h3>
+                <p>Contributed to the development and implementation of Idrobe's AI-powered fashion recommendation system, combining technology with user experience design.</p>
+            </div>
+            <div class="project-slide" id="slide3" style="display: none;">
+                <h3>University Leadership</h3>
+                <p>Active participation in debate club and chess club, developing leadership skills and representing the university in various competitions and events.</p>
+            </div>
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <h2>CONTACT</h2>
+        <div class="contact-info">
+            <p><b>Email:</b> <a href="mailto:f.lumumba@alustudent.com">f.lumumba@alustudent.com</a></p>
+            <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/fadhili-beracah-404840338" target="_blank">Fadhili's LinkedIn</a></p>
+            <p><b>Phone:</b> <a href="tel:0759075813">0759-075-813</a></p>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Send me a message</h3>
+            <form id="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span id="name-error" class="error"></span>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="email-error" class="error"></span>
+                
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span id="message-error" class="error"></span>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simple Modal -->
+    <div id="modal" style="display: none;">
+        <div id="modal-content">
+            <span id="close-modal">&times;</span>
+            <h3>Thank You!</h3>
+            <p>Your message has been received. I'll get back to you soon!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fadhili Lumumba. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.getElementById('menu-toggle').onclick = function() {
+            var navbar = document.getElementById('navbar');
+            if (navbar.style.height === '200px') {
+                navbar.style.height = '50px';
+            } else {
+                navbar.style.height = '200px';
+            }
+        }
+
+        // Simple slider
+        var currentSlide = 1;
+        
+        function showSlide(n) {
+            document.getElementById('slide1').style.display = 'none';
+            document.getElementById('slide2').style.display = 'none';
+            document.getElementById('slide3').style.display = 'none';
+            
+            document.getElementById('slide' + n).style.display = 'block';
+        }
+        
+        function nextSlide() {
+            currentSlide++;
+            if (currentSlide > 3) {
+                currentSlide = 1;
+            }
+            showSlide(currentSlide);
+        }
+        
+        function previousSlide() {
+            currentSlide--;
+            if (currentSlide < 1) {
+                currentSlide = 3;
+            }
+            showSlide(currentSlide);
+        }
+
+        // Auto slider
+        setInterval(function() {
+            nextSlide();
+        }, 4000);
+
+        // Form validation
+        document.getElementById('contact-form').onsubmit = function(e) {
+            e.preventDefault();
+            
+            // Clear errors
+            document.getElementById('name-error').innerHTML = '';
+            document.getElementById('email-error').innerHTML = '';
+            document.getElementById('message-error').innerHTML = '';
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+            var isValid = true;
+            
+            // Check name
+            if (name.length < 2) {
+                document.getElementById('name-error').innerHTML = 'Name must be at least 2 characters';
+                isValid = false;
+            }
+            
+            // Check email
+            if (!email.includes('@') || !email.includes('.')) {
+                document.getElementById('email-error').innerHTML = 'Please enter a valid email';
+                isValid = false;
+            }
+            
+            // Check message
+            if (message.length < 10) {
+                document.getElementById('message-error').innerHTML = 'Message must be at least 10 characters';
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show modal
+                document.getElementById('modal').style.display = 'block';
+                
+                // Clear form
+                document.getElementById('contact-form').reset();
+            }
+        }
+
+        // Close modal
+        document.getElementById('close-modal').onclick = function() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Smooth scroll for links
+        var links = document.querySelectorAll('a[href^="#"]');
+        for (var i = 0; i < links.length; i++) {
+            links[i].onclick = function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({behavior: 'smooth'});
+                }
+            }
+        }
+    </script>
+</body>
+</html>

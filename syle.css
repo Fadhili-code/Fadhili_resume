@@ -1,0 +1,418 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #1e3c96;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 50px;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+#navbar a:hover {
+    background-color: #2850d1;
+    border-radius: 3px;
+}
+
+#menu-toggle {
+    color: white;
+    font-size: 20px;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
+/* Header */
+#header {
+    background: linear-gradient(to right, #1e3c96, #4a90e2);
+    color: white;
+    text-align: center;
+    padding: 150px 20px 100px 20px;
+    margin-top: 50px;
+}
+
+#header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#header hr {
+    width: 100px;
+    margin: 20px auto;
+    border: 1px solid white;
+}
+
+#header p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Sections */
+div[id] {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #1e3c96;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* About Section */
+#about {
+    background-color: #f8f9ff;
+}
+
+#about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Experience Section */
+#experience {
+    background-color: white;
+}
+
+.job {
+    background-color: #f8f9ff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #1e3c96;
+    border-radius: 5px;
+}
+
+.job h3 {
+    color: #1e3c96;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.job h4 {
+    color: #2850d1;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.job p {
+    margin-bottom: 10px;
+}
+
+/* Education Section */
+#education {
+    background-color: #f8f9ff;
+    text-align: center;
+}
+
+.school h3 {
+    color: #1e3c96;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.school p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+#skills {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-box {
+    background-color: #f8f9ff;
+    padding: 25px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    border: 2px solid #e0e6ff;
+}
+
+.skill-box h3 {
+    color: #1e3c96;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.skill-box ul {
+    list-style: none;
+}
+
+.skill-box li {
+    padding: 5px 0;
+    color: #555;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f8f9ff;
+    text-align: center;
+}
+
+#project-slider {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #e0e6ff;
+}
+
+.project-slide h3 {
+    color: #1e3c96;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.project-slide p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#project-slider button {
+    background-color: #1e3c96;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#project-slider button:hover {
+    background-color: #2850d1;
+}
+
+/* Contact Section */
+#contact {
+    background-color: white;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #2850d1;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f8f9ff;
+    padding: 25px;
+    border-radius: 5px;
+    border: 2px solid #e0e6ff;
+}
+
+.contact-form h3 {
+    color: #1e3c96;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1e3c96;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2850d1;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #1e3c96;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #2850d1;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Modal */
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+#modal-content {
+    background-color: white;
+    margin: 20% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+#modal-content h3 {
+    color: #1e3c96;
+    margin-bottom: 15px;
+}
+
+#close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+#close-modal:hover {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3c96;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+    
+    #navbar a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    #header h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    #skills {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-box {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    #contact {
+        flex-direction: column;
+    }
+    
+    div[id] {
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #header h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    .job,
+    .contact-form {
+        padding: 15px;
+    }
+    
+    #modal-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+    
+    div[id] {
+        padding: 20px 10px;
+    }
+}
